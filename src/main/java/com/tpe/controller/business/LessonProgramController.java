@@ -70,7 +70,7 @@ public class LessonProgramController {
     }
 
     @GetMapping("/getAllLessonProgramByTeacher")// http://localhost:8080/lessonPrograms/getAllLessonProgramByTeacher
-    @PreAuthorize("hasAnyAuthority('TEACHER','STUDENT')")
+    @PreAuthorize("hasAnyAuthority('TEACHER')")
     public Set<LessonProgramResponse> getAllByTeacher(HttpServletRequest httpServletRequest){
         return lessonProgramService.getAllLessonProgramByUser(httpServletRequest);
     }

@@ -12,6 +12,7 @@ import com.tpe.payload.mappers.StudentInfoMapper;
 import com.tpe.payload.messages.ErrorMessages;
 import com.tpe.payload.messages.SuccessMessages;
 import com.tpe.payload.request.business.StudentInfoRequest;
+import com.tpe.payload.request.business.UpdateStudentInfoRequest;
 import com.tpe.payload.response.ResponseMessage;
 import com.tpe.payload.response.business.StudentInfoResponse;
 import com.tpe.repository.business.StudentInfoRepository;
@@ -126,5 +127,49 @@ public class StudentInfoService {
         Pageable pageable = pageableHelper.getPageableWithProperties(page, size, sort, type);
         return studentInfoRepository.findAll(pageable)
                 .map(studentInfoMapper::mapStudentInfoToStudentInfoResponse);
+    }
+
+
+    public ResponseMessage<StudentInfoResponse> update(UpdateStudentInfoRequest studentInfoRequest,
+                                                       Long studentInfoId) {
+        Lesson lesson = lessonService.isLessonExistById(studentInfoRequest.getLessonId());
+        EducationTerm educationTerm = educationTermService.getEducationTermById(studentInfoRequest.getEducationTermId());
+        StudentInfo studentInfo = isStudentInfoExistById(studentInfoId);
+        Double noteAverage = calculateExamAverage(studentInfoRequest.getMidtermExam(), studentInfoRequest.getFinalExam());
+        Note note = checkLetterGrade(noteAverage);
+        StudentInfo studentInfoForUpdate = studentInfoMapper.mapUpdateStudentInfoRequestToStudentInfo(studentInfoRequest,studentInfoId,
+                                                                    lesson,educationTerm,note,noteAverage);
+        studentInfoForUpdate.setStudent(studentInfo.getStudent());
+        studentInfoForUpdate.setTeacher(studentInfo.getTeacher());
+
+        StudentInfo updatedStudentInfo = studentInfoRepository.save(studentInfoForUpdate);
+
+        return ResponseMessage.<StudentInfoResponse>builder()
+                .message(SuccessMessages.STUDENT_INFO_UPDATE)
+                .httpStatus(HttpStatus.OK)
+                .object(studentInfoMapper.mapStudentInfoToStudentInfoResponse(updatedStudentInfo))
+                .build();
+
+    }
+
+    public Page<StudentInfoResponse> getAllForTeacher(HttpServletRequest httpServletRequest, int page, int size) {
+
+        Pageable pageable = pageableHelper.getPageableWithProperties(page,size);
+        String username = (String) httpServletRequest.getAttribute("username");
+
+        return studentInfoRepository
+                .findByTeacherId_UsernameEquals(username,pageable)
+                .map(studentInfoMapper::mapStudentInfoToStudentInfoResponse);
+    }
+
+    public Page<StudentInfoResponse> getAllForStudent(HttpServletRequest httpServletRequest, int page, int size) {
+
+        Pageable pageable = pageableHelper.getPageableWithProperties(page,size);
+        String username = (String) httpServletRequest.getAttribute("username");
+
+        return studentInfoRepository
+                .findByStudentId_UsernameEquals(username,pageable)
+                .map(studentInfoMapper::mapStudentInfoToStudentInfoResponse);
+
     }
 }
