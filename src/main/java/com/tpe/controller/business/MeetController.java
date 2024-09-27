@@ -70,4 +70,12 @@ public class MeetController {
     public List<MeetResponse> getAllMeetByStudent(HttpServletRequest httpServletRequest){
         return meetService.getAllMeetByStudent(httpServletRequest);
     }
+
+    @PutMapping("/update/{meetId}") //http://localhost:8080/meet/update/1  + PUT + JSON
+    @PreAuthorize("hasAnyAuthority('TEACHER','ADMIN')")
+    public ResponseMessage<MeetResponse> updateMeetById(@PathVariable Long meetId,
+                                                        @RequestBody @Valid MeetRequest meetRequest,
+                                                        HttpServletRequest httpServletRequest){
+        return meetService.updateMeet(meetRequest,meetId,httpServletRequest);
+    }
 }

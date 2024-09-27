@@ -167,4 +167,34 @@ public class MeetService {
                 .map(meetMapper::mapMeetToMeetResponse)
                 .collect(Collectors.toList());
     }
+
+    public ResponseMessage<MeetResponse> updateMeet(MeetRequest meetRequest, Long meetId, HttpServletRequest httpServletRequest) {
+        Meet meet = isMeetExistById(meetId);
+        isTeacherControl(meet,httpServletRequest);
+        dateTimeValidator.checkTimeWithException(meetRequest.getStartTime(),meetRequest.getStopTime());
+
+        if(
+                !(meet.getDate().equals(meetRequest.getDate()) &&
+                  meet.getStartTime().equals(meetRequest.getStartTime()) &&
+                  meet.getStopTime().equals(meetRequest.getStopTime())
+                )
+        ){
+            // !!! Student icin cakisma kontrolu
+            for(Long studentId : meetRequest.getStudentIds()){
+                checkMeetConflict(studentId,
+                        meetRequest.getDate(),
+                        meetRequest.getStartTime(),
+                        meetRequest.getStopTime());
+            }
+            // !!! Teacher icin cakisma kontrolu
+            checkMeetConflict(meet.getAdvisoryTeacher().getId(),
+                    meetRequest.getDate(),
+                    meetRequest.getStartTime(),
+                    meetRequest.getStopTime());
+        }
+
+        //yarım kaldı devam edecğeim
+        return null;
+
+    }
 }
