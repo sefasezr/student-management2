@@ -3,6 +3,7 @@ package com.tpe.controller.user;
 import com.tpe.payload.request.user.StudentRequest;
 import com.tpe.payload.request.user.StudentRequestWithoutPassword;
 import com.tpe.payload.response.ResponseMessage;
+import com.tpe.payload.response.business.ChooseLessonProgramWithId;
 import com.tpe.payload.response.user.StudentResponse;
 import com.tpe.service.user.StudentService;
 import lombok.RequiredArgsConstructor;
@@ -45,7 +46,13 @@ public class StudentController {
         return studentService.updateStudentForManagers(userId,studentRequest);
     }
 
-    //TODO: LessonProgram ekleem metodu yazilacak
+    @PostMapping("addLessonProgramToStudent")   //http://localhost:8080/student/addLessonProgramToStudent
+    @PreAuthorize("hasAnyAuthority('STUDENT')")
+    public ResponseMessage<StudentResponse> addLessonProgram(HttpServletRequest request,
+                                                            @RequestBody @Valid ChooseLessonProgramWithId chooseLessonProgramWithId){
+        String userName = (String) request.getAttribute("username");
+        return studentService.addLessonProgramToStudent(userName,chooseLessonProgramWithId);
+    }
 
     @GetMapping("/changeStatus")  // http://localhost:8080/student/changeStatus?id=1&status=true + GET
     @PreAuthorize("hasAnyAuthority('ADMIN','MANAGER','ASSISTANT_MANAGER')")

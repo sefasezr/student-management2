@@ -42,4 +42,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "select (count (u)>0) from User u where u.userRole.roleType = ?1")
     boolean findStudent(RoleType roleType);
 
+    @Query("select u from User u where u.id in :studentIds")
+    List<User> findByIdsEquals(Long[] studentIds);
 }

@@ -13,6 +13,7 @@ import com.tpe.payload.response.user.StudentResponse;
 import com.tpe.payload.response.user.TeacherResponse;
 import com.tpe.payload.response.user.UserResponse;
 import com.tpe.repository.user.UserRepository;
+import com.tpe.service.business.LessonProgramService;
 import com.tpe.service.helper.MethodHelper;
 import com.tpe.service.validator.UniquePropertyValidator;
 import lombok.RequiredArgsConstructor;
@@ -34,9 +35,12 @@ public class TeacherService {
     private final UserRoleService userRoleService;
     private final PasswordEncoder passwordEncoder;
     private final MethodHelper methodHelper;
+    private final LessonProgramService lessonProgramService;
 
     public ResponseMessage<TeacherResponse> saveTeacher(TeacherRequest teacherRequest) {
-        // !!! TODO : LessonProgram eklenecek
+
+        Set<LessonProgram> lessonProgramSet =
+                lessonProgramService.getLessonProgramById(teacherRequest.getLessonsIdList());
 
         uniquePropertyValidator.checkDuplicate(
                 teacherRequest.getUsername(),
@@ -47,7 +51,8 @@ public class TeacherService {
 
         User teacher = userMapper.mapTeacherRequestToUser(teacherRequest);
         teacher.setUserRole(userRoleService.getUserRole(RoleType.TEACHER));
-        //!!! TODO : lessonProgram setlenecek
+
+        teacher.setLessonProgramList(lessonProgramSet);
         teacher.setPassword(passwordEncoder.encode(teacherRequest.getPassword()));
         if(teacherRequest.getIsAdvisorTeacher()){
             teacher.setIsAdvisor(Boolean.TRUE);
@@ -79,7 +84,8 @@ public class TeacherService {
         // !!! Parametrede gelen id bir teacher a ait degilse exception firlatiliyor
         methodHelper.checkRole(user,RoleType.TEACHER);
 
-        //!!! TODO: LessonProgramlar getiriliyor
+        Set<LessonProgram> lessonPrograms =
+                lessonProgramService.getLessonProgramById(teacherRequest.getLessonsIdList());
 
         // !!! unique kontrolu
         uniquePropertyValidator.checkUniqueProperties(user, teacherRequest);
@@ -87,7 +93,7 @@ public class TeacherService {
         User updatedTeacher = userMapper.mapTeacherRequestToUpdatedUser(teacherRequest, userId);
         // !!! props. that does n't exist in mappers
         updatedTeacher.setPassword(passwordEncoder.encode(teacherRequest.getPassword()));
-        // !!! TODO: LessonProgram sonrasi eklenecek
+        updatedTeacher.setLessonProgramList(lessonPrograms);
 
         updatedTeacher.setUserRole(userRoleService.getUserRole(RoleType.TEACHER));
 
