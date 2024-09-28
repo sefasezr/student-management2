@@ -1,112 +1,22 @@
-"2024-09-27 16:17:22,472 INFO  [main] com.tpe.StudentManagementApplication:Starting StudentManagementApplication using Java 17.0.11 on Sefa with PID 17480 (C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes started by sefasezer in C:\Users\sefas\OneDrive\Masaüstü\Project\student-management)
-""2024-09-27 16:17:22,478 INFO  [main] com.tpe.StudentManagementApplication:No active profile set, falling back to 1 default profile: "default"
-""2024-09-27 16:17:23,183 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2024-09-27 16:17:23,262 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'meetRepository' defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'meetRepository': There is already [Generic bean: class [com.tpe.controller.business.MeetRepository]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes\com\tpe\controller\business\MeetRepository.class]] bound.
-""2024-09-27 16:17:23,268 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2024-09-27 16:17:23,282 ERROR [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'meetRepository', defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in file [C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes\com\tpe\controller\business\MeetRepository.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-""2024-09-27 16:17:42,574 INFO  [main] com.tpe.StudentManagementApplication:Starting StudentManagementApplication using Java 17.0.11 on Sefa with PID 17824 (C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes started by sefasezer in C:\Users\sefas\OneDrive\Masaüstü\Project\student-management)
-""2024-09-27 16:17:42,576 INFO  [main] com.tpe.StudentManagementApplication:No active profile set, falling back to 1 default profile: "default"
-""2024-09-27 16:17:43,051 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2024-09-27 16:17:43,119 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'meetRepository' defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'meetRepository': There is already [Generic bean: class [com.tpe.controller.business.MeetRepository]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes\com\tpe\controller\business\MeetRepository.class]] bound.
-""2024-09-27 16:17:43,125 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2024-09-27 16:17:43,135 ERROR [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'meetRepository', defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in file [C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes\com\tpe\controller\business\MeetRepository.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-""2024-09-27 16:19:47,835 INFO  [main] com.tpe.StudentManagementApplication:Starting StudentManagementApplication using Java 17.0.11 on Sefa with PID 1308 (C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes started by sefasezer in C:\Users\sefas\OneDrive\Masaüstü\Project\student-management)
-""2024-09-27 16:19:47,837 INFO  [main] com.tpe.StudentManagementApplication:No active profile set, falling back to 1 default profile: "default"
-""2024-09-27 16:19:48,432 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2024-09-27 16:19:48,502 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'meetRepository' defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'meetRepository': There is already [Generic bean: class [com.tpe.controller.business.MeetRepository]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes\com\tpe\controller\business\MeetRepository.class]] bound.
-""2024-09-27 16:19:48,508 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-""2024-09-27 16:19:48,519 ERROR [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'meetRepository', defined in com.tpe.repository.business.MeetRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in file [C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes\com\tpe\controller\business\MeetRepository.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-""2024-09-27 16:20:42,478 INFO  [main] com.tpe.StudentManagementApplication:Starting StudentManagementApplication using Java 17.0.11 on Sefa with PID 11304 (C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes started by sefasezer in C:\Users\sefas\OneDrive\Masaüstü\Project\student-management)
-""2024-09-27 16:20:42,481 INFO  [main] com.tpe.StudentManagementApplication:No active profile set, falling back to 1 default profile: "default"
-""2024-09-27 16:20:43,165 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2024-09-27 16:20:43,251 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 79 ms. Found 8 JPA repository interfaces.
-""2024-09-27 16:20:43,668 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
-""2024-09-27 16:20:43,674 INFO  [main] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2024-09-27 16:20:43,674 INFO  [main] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2024-09-27 16:20:43,742 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2024-09-27 16:20:43,743 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1213 ms
-""2024-09-27 16:20:43,847 INFO  [main] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2024-09-27 16:20:43,887 INFO  [main] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-""2024-09-27 16:20:44,024 INFO  [main] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-""2024-09-27 16:20:44,102 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-""2024-09-27 16:20:44,259 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-""2024-09-27 16:20:44,274 INFO  [main] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2024-09-27 16:20:45,110 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2024-09-27 16:20:45,116 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2024-09-27 16:20:45,798 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-""2024-09-27 16:20:45,932 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e111e08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e0e3048, org.springframework.security.web.context.SecurityContextPersistenceFilter@4687c184, org.springframework.security.web.header.HeaderWriterFilter@65f96d58, org.springframework.web.filter.CorsFilter@7bc4ac3e, org.springframework.security.web.authentication.logout.LogoutFilter@51b11186, com.tpe.security.jwt.AuthTokenFilter@7e28f150, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@394950ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73dd3a46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@504274c1, org.springframework.security.web.session.SessionManagementFilter@68a97fc1, org.springframework.security.web.access.ExceptionTranslationFilter@69ae7632, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18ad085a]
-""2024-09-27 16:20:46,096 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
-""2024-09-27 16:20:46,103 INFO  [main] com.tpe.StudentManagementApplication:Started StudentManagementApplication in 4.038 seconds (JVM running for 4.601)
-""2024-09-27 16:21:36,256 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2024-09-27 16:21:36,257 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-""2024-09-27 16:21:36,258 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
-""2024-09-27 23:09:02,044 INFO  [main] com.tpe.StudentManagementApplication:Starting StudentManagementApplication using Java 17.0.11 on Sefa with PID 27272 (C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes started by sefasezer in C:\Users\sefas\OneDrive\Masaüstü\Project\student-management)
-""2024-09-27 23:09:02,047 INFO  [main] com.tpe.StudentManagementApplication:No active profile set, falling back to 1 default profile: "default"
-""2024-09-27 23:09:03,054 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2024-09-27 23:09:03,148 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 86 ms. Found 8 JPA repository interfaces.
-""2024-09-27 23:09:03,539 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
-""2024-09-27 23:09:03,545 INFO  [main] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2024-09-27 23:09:03,545 INFO  [main] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2024-09-27 23:09:03,618 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2024-09-27 23:09:03,619 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1518 ms
-""2024-09-27 23:09:03,717 INFO  [main] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2024-09-27 23:09:03,746 INFO  [main] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-""2024-09-27 23:09:03,853 INFO  [main] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-""2024-09-27 23:09:03,915 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-""2024-09-27 23:09:04,036 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-""2024-09-27 23:09:04,047 INFO  [main] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2024-09-27 23:09:04,806 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2024-09-27 23:09:04,812 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2024-09-27 23:09:05,484 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-""2024-09-27 23:09:05,616 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15ea0ca3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f3a92fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@69c51fdb, org.springframework.security.web.header.HeaderWriterFilter@71806c64, org.springframework.web.filter.CorsFilter@4e111e08, org.springframework.security.web.authentication.logout.LogoutFilter@70869678, com.tpe.security.jwt.AuthTokenFilter@e344f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68a97fc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@227fc322, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e0e3048, org.springframework.security.web.session.SessionManagementFilter@594f508f, org.springframework.security.web.access.ExceptionTranslationFilter@3b399f5a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e488e45]
-""2024-09-27 23:09:05,769 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
-""2024-09-27 23:09:05,777 INFO  [main] com.tpe.StudentManagementApplication:Started StudentManagementApplication in 4.154 seconds (JVM running for 4.726)
-""2024-09-27 23:11:40,368 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2024-09-27 23:11:40,369 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-""2024-09-27 23:11:40,371 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+"2024-09-28 08:54:14,242 INFO  [main] com.tpe.StudentManagementApplication:Starting StudentManagementApplication using Java 17.0.11 on Sefa with PID 27596 (C:\Users\sefas\OneDrive\Masaüstü\Project\student-management\target\classes started by sefasezer in C:\Users\sefas\OneDrive\Masaüstü\Project\student-management)
+""2024-09-28 08:54:14,249 INFO  [main] com.tpe.StudentManagementApplication:No active profile set, falling back to 1 default profile: "default"
+""2024-09-28 08:54:15,050 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2024-09-28 08:54:15,154 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 96 ms. Found 8 JPA repository interfaces.
+""2024-09-28 08:54:15,675 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8080 (http)
+""2024-09-28 08:54:15,684 INFO  [main] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2024-09-28 08:54:15,684 INFO  [main] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2024-09-28 08:54:15,794 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2024-09-28 08:54:15,795 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1495 ms
+""2024-09-28 08:54:15,913 INFO  [main] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2024-09-28 08:54:15,961 INFO  [main] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2024-09-28 08:54:16,094 INFO  [main] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2024-09-28 08:54:16,173 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2024-09-28 08:54:16,347 INFO  [main] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2024-09-28 08:54:16,361 INFO  [main] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2024-09-28 08:54:17,425 INFO  [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2024-09-28 08:54:17,434 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2024-09-28 08:54:18,295 WARN  [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2024-09-28 08:54:18,460 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24b4f4a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d8a1456, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b1895e, org.springframework.security.web.header.HeaderWriterFilter@73dd3a46, org.springframework.web.filter.CorsFilter@351fadfa, org.springframework.security.web.authentication.logout.LogoutFilter@29c76d75, com.tpe.security.jwt.AuthTokenFilter@6e5af973, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d57b264, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d94279f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e1953f7, org.springframework.security.web.session.SessionManagementFilter@123426a9, org.springframework.security.web.access.ExceptionTranslationFilter@65f3f9e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4932d580]
+""2024-09-28 08:54:18,647 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8080 (http) with context path ''
+""2024-09-28 08:54:18,656 INFO  [main] com.tpe.StudentManagementApplication:Started StudentManagementApplication in 4.905 seconds (JVM running for 5.643)
 "

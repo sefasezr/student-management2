@@ -171,7 +171,8 @@ public class MeetService {
     public ResponseMessage<MeetResponse> updateMeet(MeetRequest meetRequest, Long meetId, HttpServletRequest httpServletRequest) {
         Meet meet = isMeetExistById(meetId);
         isTeacherControl(meet,httpServletRequest);
-        dateTimeValidator.checkTimeWithException(meetRequest.getStartTime(),meetRequest.getStopTime());
+        dateTimeValidator.checkTimeWithException(meetRequest.getStartTime(),
+                meetRequest.getStopTime());
 
         if(
                 !(meet.getDate().equals(meetRequest.getDate()) &&
@@ -193,8 +194,17 @@ public class MeetService {
                     meetRequest.getStopTime());
         }
 
-        //yarım kaldı devam edecğeim
-        return null;
+        List<User> students = userService.getStudentById(meetRequest.getStudentIds());
+        Meet updatedMeet = meetMapper.mapMeetUpdatedRequestToMeet(meetRequest,meetId);
+        updatedMeet.setStudentList(students);
+        updatedMeet.setAdvisoryTeacher(meet.getAdvisoryTeacher());
 
+        Meet savedMeet = meetRepository.save(updatedMeet);
+
+        return ResponseMessage.<MeetResponse>builder()
+                .message(SuccessMessages.MEET_UPDATE)
+                .httpStatus(HttpStatus.OK)
+                .object(meetMapper.mapMeetToMeetResponse(savedMeet))
+                .build();
     }
 }
