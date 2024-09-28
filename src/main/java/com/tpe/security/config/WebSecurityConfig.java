@@ -85,7 +85,7 @@ public class WebSecurityConfig {
             "/image/**",
             "/css/**",
             "/js/**",
-            "/contactMessage/save",
+            "/contactMessages/save",
             "/auth/login",
             "/",
             "/v3/api-docs/**", // eklenecek
